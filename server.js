@@ -17,6 +17,9 @@ var db = require('./models');
 
 //-------------ROUTES--------------//
 app.get('/', (req, res) => {
+  res.sendFile('views/index.html', {root: __dirname});
+})
+app.get('/admin', (req, res) => {
   res.sendFile('views/admin.html', {root: __dirname});
 })
 
@@ -43,9 +46,9 @@ app.get('/api/subscribers/:id', function (req, res) {
 
 // create new subscriber
 app.post('/api/subscribers', function (req, res) {
-  db.subscriber.create(req.body, (err, newsubscriber) => {
+  db.Subscriber.create(req.body, (err, newSubscriber) => {
     if (err) return res.status(500).json({msg: 'Something went wrong. Please try again'});
-    res.json(newsubscriber);
+    res.json(newSubscriber);
   });
 });
 
