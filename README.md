@@ -23,7 +23,7 @@ _A business should be able to:_
 
 ## Wireframes
 ---
-![Wireframes](assets/Wirefram_001.png "Wireframes")
+![Wireframes](assets/wirefram001.png "Wireframes")
 ![Wireframes](assets/Wirefram002.png "Wireframes")
 
 ## Technologies Used
