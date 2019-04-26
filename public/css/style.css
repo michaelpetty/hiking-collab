@@ -15,3 +15,6 @@ footer {
 footer div {
   display: inline-block;
 }
+.hide {
+  display: none;
+}

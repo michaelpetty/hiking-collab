@@ -7,7 +7,8 @@
     <meta name="keywords" content="san francisco, hiking, meetup, bay area, outdoors" />
 
     <title>Happy Hikers - Newsletter Sign-Up</title>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script> -->
     <script defer src="/scripts/main.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/brands.css" integrity="sha384-n9+6/aSqa9lBidZMRCQHTHKJscPq6NW4pCQBiMmHdUCvPN8ZOg2zJJTkC7WIezWv" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/fontawesome.css" integrity="sha384-vd1e11sR28tEK9YANUtpIOdjGW14pS87bUBuOIoBILVWLFnS+MCX9T6MMf0VdPGq" crossorigin="anonymous">
@@ -20,35 +21,44 @@
     </header>
 
     <section class="newsletter">
-      <form>
+      <form id="newsletterSub" novalidate>
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="firstName">First name</label>
-            <input type="text" class="form-control" id="firstName"  placeholder="First name">
+            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First name" required>
+            <p class="hide is-invalid">Please enter your first name</p>
           </div>
           <div class="form-group col-md-6">
             <label for="lastName">Last name</label>
-            <input type="text" class="form-control" id="lastName" placeholder="Last name">
+            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last name" required>
+            <p class="hide is-invalid">Please enter your last name</p>
           </div>
         </div>
         <div class="form-group">
-          <label for="emailInput">Password</label>
-          <input type="email" class="form-control" id="emailInput" placeholder="This is NOT spam">
+          <label for="emailInput">Email</label>
+          <input type="email" class="form-control" id="emailInput" name="emailInput" placeholder="This is NOT spam" required>
+          <p class="hide is-invalid">Please enter a valid email</p>
         </div>
-        <div class="form-check">
+        <div class="form-check-inline">
           <input type="checkbox" class="form-check-input" id="news1">
           <label class="form-check-label" for="news1">Newsletter 1</label>
         </div>
-        <div class="form-check">
+        <div class="form-check-inline">
           <input type="checkbox" class="form-check-input" id="news2">
           <label class="form-check-label" for="news2">Newsletter 2</label>
         </div>
-        <div class="form-check">
+        <div class="form-check-inline">
           <input type="checkbox" class="form-check-input" id="news3">
           <label class="form-check-label" for="news3">Newsletter 3</label>
         </div>
         <button type="submit" class="btn btn-primary">Subscribe</button>
       </form>
+      <div class="hide" id="subscribeSuccess">
+        Yea, Hiker <span id="hiker"></span>!<br />
+        Thanks for subscribing.<br/>
+        <p>You are now a part of our Happy Hikers family.</p>
+        <p>Keep a lookout for our awesome upcoming events!</p>    
+      </div>
     </section>
     <footer><div>&copy; 2019, Happy Hikers</div><div><i class="fab fa-twitter"></i><i class="fab fa-instagram"></i><i class="fab fa-facebook-f"></i></div></footer>
   </body>
