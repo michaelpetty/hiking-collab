@@ -33,6 +33,7 @@ $(document).ready(function(){
       })
 
       $('#newsletterSub').addClass('hide');
+      $('#hiker').html($('#firstName').val());
       $('#subscribeSuccess').removeClass('hide');
 
     }

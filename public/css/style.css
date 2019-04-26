@@ -6,14 +6,88 @@
   scroll-behavior: smooth;
 }
 body {
-  background-color: lavender;
 }
 footer {
+  margin: 0 20px 30px;
+  font-size: 10px;
   display: flex;
   justify-content: space-between;
 }
 footer div {
   display: inline-block;
+}
+footer i {
+  margin: 0 12px;
+}
+.newsletter {
+  margin: 20px 30px 0px;
+}
+.newsletter h2 {
+  margin-bottom: 20px;
+  color: #FF9D75;
+  font-size: 18px;
+  text-align: center;
+}
+.newsletter p {
+  margin-bottom: 20px;
+}
+.newsletterbox {
+  margin: 0 auto;
+  max-width: 600px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+label {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+input {
+  height: 40px;
+}
+.form-control {
+  border-radius: 0;
+}
+.checkboxes {
+  font-size: 12px;
+}
+.privacy {
+  margin-bottom: 40px;
+  font-size: 9px;
+  text-align: center;
+}
+button {
+  margin: 0 auto 40px;
+}
+.btn {
+  display: block;
+  border-radius: 0;
+}
+.btn-primary {
+  background-color: #86B994;
+  border-color: #86B994;
+}
+.btn-primary:hover {
+  color: #86B994;
+  background-color: #BBE4C0;
+  border-color: #BBE4C0;
+}
+.success {
+  text-align: center;
+}
+.success span {
+  color: #FB8580;
+  line-height: 20px;
+}
+.success p {
+  line-height: 20px;
+}
+.success img {
+  width: 80%;
+  margin: 0 auto 20px;
+}
+img.img2{
+  margin: 40px auto;
 }
 .hide {
   display: none;
