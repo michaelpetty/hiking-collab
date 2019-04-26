@@ -4,9 +4,9 @@ const SubscriberSchema = new Schema({
     firstName: String,
     lastName: String,
     email: String,
-    news1: Boolean,
-    news2: Boolean,
-    news3: Boolean,
+    DayHikes: Boolean,
+    OvernightHikes: Boolean,
+    DestinationHikes: Boolean,
     
 });
 
