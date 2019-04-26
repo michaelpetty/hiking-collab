@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const newsLetterSchema = new Schema({
+const SubscriberSchema = new Schema({
     firstName: String,
     lastName: String,
     email: String,
@@ -10,6 +10,6 @@ const newsLetterSchema = new Schema({
     
 });
 
-const newsLetter = mongoose.model('newsLetter', newsLetterSchema);
-module.exports = newsLetter;
+const Subscriber = mongoose.model('Subscriber', SubscriberSchema );
+module.exports = Subscriber;
 
