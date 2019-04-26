@@ -12,14 +12,16 @@ $(document).ready(function(){
     checkValidity($('#lastName'), nameRE);
     checkValidity($('#emailInput'), emailRE);
 
+    console.log(`checkbox: ${$('#news1').val()}`);
+
     if (noErrors) {
       $.ajax({
         method: 'POST',
         url: '/api/subscribers',
         data: JSON.stringify({
-          firstName: $('#firstName').eq(0).val(),
-          lastName: $('#lastName').eq(0).val(),
-          email: $('#emailInput').eq(0).val()
+          firstName: $('#firstName').val(),
+          lastName: $('#lastName').val(),
+          email: $('#emailInput').val()
         }),
         contentType: "application/json; charset=utf-8",
         dataType: "json",
@@ -33,7 +35,7 @@ $(document).ready(function(){
     }
 
     function checkValidity(ele, re) {
-      if (!re.test(ele.eq(0).val())) {
+      if (!re.test(ele.val())) {
         ele.removeClass('is-valid').addClass('is-invalid');
         ele.next('p').removeClass('hide');
         noErrors = false;
