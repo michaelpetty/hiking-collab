@@ -54,4 +54,4 @@ Add:
 
 ##### Screenshot
 
-![Happy Hikers Dashboard](images/Dashboard_test.gif  "Happy Hikers Dashboard")
+![Happy Hikers Dashboard](assets/Dashboard_test.gif  "Happy Hikers Dashboard")
