@@ -43,7 +43,10 @@ $(document).ready(function(){
 
       }
     }
-
+    function handlePostSuccess(res) {}
+    function handlePostError(err) {
+      console.log(`Error: ${err}`);
+    }
   })
 
 })
