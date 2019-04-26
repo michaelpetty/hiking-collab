@@ -17,7 +17,7 @@ var db = require('./models');
 
 //-------------ROUTES--------------//
 app.get('/', (req, res) => {
-  res.sendFile('views/admin.html', {root: __dirname});
+  res.sendFile('views/index.html', {root: __dirname});
 })
 
 
