@@ -12,7 +12,7 @@ $(document).ready(function(){
     checkValidity($('#lastName'), nameRE);
     checkValidity($('#emailInput'), emailRE);
 
-    console.log(`checkbox: ${$('#news1').val()}`);
+    console.log(`checkbox: ${$('#news1').prop('checked')}`);
 
     if (noErrors) {
       $.ajax({
@@ -21,7 +21,10 @@ $(document).ready(function(){
         data: JSON.stringify({
           firstName: $('#firstName').val(),
           lastName: $('#lastName').val(),
-          email: $('#emailInput').val()
+          email: $('#emailInput').val(),
+          DayHikes: $('#news1').prop('checked'),
+          OvernightHikes: $('#news2').prop('checked'),
+          DestinationHikes: $('#news3').prop('checked')
         }),
         contentType: "application/json; charset=utf-8",
         dataType: "json",
