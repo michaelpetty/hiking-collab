@@ -1,11 +1,12 @@
 console.log("Sanity Check: JS is working!");
 
-// var $subscribersList;
-// var allSubscribers = [];
+var $subscribersList;
+var allSubscribers = [];
 
 $(document).ready(function(){
 
-    // $subscribersList = $('#subscribersTarget');
+    $subscribersList = $('#myTable');
+
     $('#getResult').on('click', function(e) {
         console.log('click get data yay!!!!!');
         e.preventDefault();
@@ -28,38 +29,46 @@ $(document).ready(function(){
 
 });
 
-    function handleSuccess(subscriber) {
-        subscriber.forEach(subscriber =>{
-            $('#subscribersTarget').append('<p> Full Name: '+ subscriber.firstName + '</p>')
-            $('#subscribersTarget').append('<p> Last Name: '+ subscriber.lastName + '</p>')
-            $('#subscribersTarget').append('<p> Email: '+ subscriber.email + '</p>')
-            $('#subscribersTarget').append('<p> News1: '+ subscriber.news1 + '</p>')
-            $('#subscribersTarget').append('<p> News2: '+ subscriber.news2 + '</p>')
-            $('#subscribersTarget').append('<p> News3: '+ subscriber.news3 + '</p>')
 
-        })
+        function getSubscriberHtml(subscriber) {
+            return `
+                    <tr>
+                    <td>${subscriber.firstName}</td>
+                    <td>${subscriber.lastName}</td>
+                    <td>${subscriber.email}</td>
+                    <td>${subscriber.DayHikes}</td>
+                    <td>${subscriber.OvernightHikes}</td>
+                    <td>${subscriber.DestinationHikes}</td>
+                    </tr>
+                    `;
+        }
+        
+        function getAllSubscribersHtml(subscribers) {
+            return subscribers.map(getSubscriberHtml).join("");
+        }
+        
+        // helper function to render all posts to view
+        // note: we empty and re-render the collection each time our post data changes
+        function render () {
+            // empty existing posts from view
+            $subscribersList.empty();
+        
+            // pass `allSubscribers` into the template function
+            var subscribersHtml = getAllSubscribersHtml(allSubscribers);
+        
+            // append html to the view
+            $subscribersList.append(subscribersHtml);
+        };
+        
+        function handleSuccess(json) {
+            allSubscribers = json;
+            render();
         }
 
-
-
-    // function getSubscriberHtml(subscriber) {
-    // return `<hr>
-    //         <p>
-    //             <b>${subscriber.firstName}</b>
-    //             <b>${subscriber.lastName}</b>
-    //             by ${subscriber.email}
-    //             by ${subscriber.news1}
-    //             by ${subscriber.news2}
-    //             by ${subscriber.news3}
-    //         </p>`;
-    // }
-
-
-
-    function handleError(e) {
-    console.log('uh oh');
-    $('#subscriberTarget').text('Failed to load subscribers, is the server working?');
-    }
+        function handleError(e) {
+        console.log('uh oh');
+        $('#subscriberTarget').text('Failed to load subscribers, is the server working?');
+        }
 
 
 
