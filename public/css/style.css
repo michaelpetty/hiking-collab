@@ -116,8 +116,18 @@ body {
 }
 
 .containerHikers-main{
-  margin: 0 20px 20px;
+  margin: 0 20px 40px;
   
+}
+.container {
+  margin-left: 20px;
+  margin-right: 20px;
+  display: contents;
+}
+
+.row{
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .head {
@@ -126,6 +136,13 @@ body {
 
 .second-Head {
   margin-bottom: 10px;
+  margin-left: 40px;
+  margin-right: 20px;
+}
+
+p{
+  margin-left: 40px;
+  margin-right: 20px;
 }
 
 h4{
@@ -163,11 +180,12 @@ h1{
 
 /*##################### arcticle ####################### */
 .col-md-6 img {
-  margin-right: 10px;
+  margin-right: 20px;
   width: 33%;
 }
 .img-left{
   float: left;
+  /* margin-right: 20px; */
 }
 
 
