@@ -102,15 +102,6 @@ img.img2{
 
 
 
-@font-face {
-  font-family: 'Avenir Heavy';
-  src: url('/public/font/AvenirLTStd-Heavy.otf'); /* IE9 Compat Modes */
-  src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
-       url('webfont.woff') format('woff'), /* Pretty Modern Browsers */
-       url('webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
-}
 body {
   font-family: 'Avenir Heavy', Fallback, sans-serif;
 }
@@ -173,21 +164,49 @@ h1{
 
 .main-pic{
   width: 90vw;
-  /* height: 140px; */
   margin: 20px auto;
   display: block;
-}
+} 
 
 /*##################### arcticle ####################### */
-.col-md-6 img {
+/* .col-md-6 img {
   margin-right: 20px;
   width: 33%;
 }
 .img-left{
   float: left;
-  /* margin-right: 20px; */
-}
 
+} */
+
+
+
+/*  */
+
+.how-section1{
+  margin-top:-15%;
+  padding: 10%;
+  display: contents;
+}
+.how-section1 h4{
+  color: #FB8580;
+  font-weight: bold;
+  font-size: 20px;
+}
+.how-section1 .text2{
+  color: #86B994;
+  font-size: 20px;
+}
+.how-section1 .row
+{
+  margin-top: 20px;
+}
+.how-img 
+{
+  text-align: center;
+}
+.how-img img{
+  width: 100%;
+}
 
 
 
