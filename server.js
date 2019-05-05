@@ -54,5 +54,14 @@ app.post('/api/subscribers', function (req, res) {
 });
 
 
+// delete subscriber
+app.delete('/api/subscribers/:id', function (req, res) {
+  db.Subscriber.findByIdAndRemove(req.params.id, (err, deletedSubscriber) => {
+    if (err) return res.status(400).json({msg: 'Subscriber ID does not exist'});
+    res.json(deletedSubscriber);
+  });
+});
+
+
 //-------------- Start up the server --------//
 app.listen(process.env.PORT || 4000, () => {console.log('Hiking app listening')});
