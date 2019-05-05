@@ -4,7 +4,7 @@
 
 This app ....
 
-[Link to project hosted on Heroku](https://name????.herokuapp.com/)
+[Link to project hosted on Heroku](https://hikingcollab.herokuapp.com/)
 
 ---
 
