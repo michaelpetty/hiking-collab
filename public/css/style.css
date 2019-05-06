@@ -179,38 +179,6 @@ h1{
 }
 
 
-
-/*  */
-
-.how-section1{
-  margin-top:-15%;
-  padding: 10%;
-  display: contents;
-}
-.how-section1 h4{
-  color: #FB8580;
-  font-weight: bold;
-  font-size: 20px;
-  margin-top: 20px;
-}
-.how-section1 .text2{
-  color: #86B994;
-  font-size: 20px;
-  /* margin-top: 20px; */
-}
-.how-section1 .row
-{
-  margin-top: 10%;
-}
-.how-img 
-{
-  text-align: center;
-}
-.how-img img{
-  /* width: 100%; */
-  width: 110vw;
-}
-
 .text-muted{
   margin-left: 130px;
 }
