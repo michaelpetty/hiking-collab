@@ -6,4 +6,4 @@ mongoose.connect(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
     .catch((err) => console.log(err));
 
 
-    module.exports.Subscriber = require('./newsLetter');
+    module.exports.Subscriber = require('./newsletter');
