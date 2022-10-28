@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const app = express();
+const subscriberCtl = require('./controllers/subscriberController')
 
 
 //------------ content ------------///
@@ -26,32 +27,13 @@ app.get('/admin', (req, res) => {
 
 
 // get all subscribers
-app.get('/api/subscribers', function (req, res) {
-  // send all subscribers as JSON response
-  db.Subscriber.find(function(err, subscribers){
-    if (err) {
-      console.log("index error: " + err);
-      res.sendStatus(500);
-    }
-    res.json(subscribers);
-  });
-});
+app.get('/api/subscribers', subscriberCtl.findAll);
 
 // get one subscriber
-app.get('/api/subscribers/:id', function (req, res) {
-  db.Subscriber.findById(req.params.id, (err, subscriber) => {
-    if (err) return res.status(400).json({msg: 'subscriber ID does not exist'});
-    res.json(subscriber);
-  });
-});
+app.get('/api/subscribers/:id', subscriberCtl.findOne);
 
 // create new subscriber
-app.post('/api/subscribers', function (req, res) {
-  db.Subscriber.create(req.body, (err, newSubscriber) => {
-    if (err) return res.status(500).json({msg: 'Something went wrong. Please try again'});
-    res.json(newSubscriber);
-  });
-});
+app.post('/api/subscribers', subscriberCtl.createOne);
 
 
 // delete subscriber
